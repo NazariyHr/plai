@@ -17,6 +17,11 @@
   </style>
 </head>
 <body>
-  <iframe src="https://script.google.com/macros/s/AKfycbzktTmWQYuxiDObDa7j5JLH06bS7HkupqB-KGM_DTyhKpk--vcHn46BdgdzA0E98ZNt/exec" allow="clipboard-write" title="Плай"></iframe>
+  <iframe id="app" allow="clipboard-write" title="Плай"></iframe>
+  <script>
+    // Прокидаємо параметри адреси (напр. ?p=… — особистий лінк входу) всередину застосунку
+    var base = 'https://script.google.com/macros/s/AKfycbzktTmWQYuxiDObDa7j5JLH06bS7HkupqB-KGM_DTyhKpk--vcHn46BdgdzA0E98ZNt/exec';
+    document.getElementById('app').src = base + (location.search || '');
+  </script>
 </body>
 </html>
